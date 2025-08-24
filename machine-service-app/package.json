@@ -1,0 +1,44 @@
+{
+  "name": "machine-service-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev:api": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build:api": "tsc",
+    "start:api": "node dist/server.js",
+    "dev:web": "cd frontend && npm install && npm run dev",
+    "build:web": "cd frontend && npm install && npm run build",
+    "preview:web": "cd frontend && npm run preview",
+    "dev": "npm-run-all -p dev:api dev:web",
+    "build": "npm-run-all build:api build:web"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^12.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "xlsx": "^0.18.5",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^24.3.0",
+    "concurrently": "^9.2.0",
+    "npm-run-all": "^4.1.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  }
+}
